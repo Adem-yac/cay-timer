@@ -14,7 +14,7 @@ Cross-platform **Flutter** app for focused work: Pomodoro-style timer, daily goa
 ```bash
 git clone https://github.com/Adem-yac/cay-timer.git
 cd cay-timer
-flutter pub get
+flutter pub get   # refreshes pubspec.lock if dependencies changed
 flutter run
 ```
 
