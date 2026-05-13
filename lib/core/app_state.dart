@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -70,6 +71,23 @@ class AppState extends ChangeNotifier {
   void setBlockedAppsPreview(List<BlockedAppTileData> items) {
     _blockedAppsPreview = List<BlockedAppTileData>.from(items);
     notifyListeners();
+  }
+
+  /// Resets in-memory fields to defaults. For tests only; use with mocked
+  /// [SharedPreferences] or call [loadPrefs] afterwards.
+  @visibleForTesting
+  void resetForTests() {
+    _language = 'en';
+    _timerPreset = 25;
+    _onboardingComplete = false;
+    _notificationsEnabled = false;
+    _blockingPermissionGranted = false;
+    _goalReminderNotif = true;
+    _timerEndNotif = true;
+    _blockingAlertNotif = true;
+    _dailyFocusGoal = 120;
+    _currentFocusMinutes = 0;
+    _blockedAppsPreview = [];
   }
 
   Future<void> loadPrefs() async {

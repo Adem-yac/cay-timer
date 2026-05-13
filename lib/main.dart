@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 
 import 'core/app_export.dart';
+import 'core/app_log.dart';
 import 'core/app_state.dart';
 import 'presentation/routes/app_routes.dart';
 import 'presentation/widgets/custom_error_widget.dart';
@@ -17,6 +18,11 @@ void main() async {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     if (!hasShownError) {
       hasShownError = true;
+      appLog(
+        'FlutterErrorWidget: ${details.exceptionAsString()}',
+        error: details.exception,
+        stackTrace: details.stack,
+      );
 
       // Reset flag after 3 seconds to allow error widget on new screens
       Future.delayed(Duration(seconds: 5), () {

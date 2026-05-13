@@ -1,7 +1,8 @@
 name: caytimer
-description: A new Flutter project.
+description: Caytimer — focus timer, daily goals, and optional Android app blocking.
 publish_to: none
 version: 1.0.0+1
+repository: https://github.com/Adem-yac/cay-timer
 
 environment:
   sdk: ^3.9.0
@@ -15,14 +16,9 @@ dependencies:
   flutter_svg: ^2.0.9        # Required for SVG icon support
   google_fonts: ^6.1.0       # Required for typography (replaces local fonts)
   shared_preferences: ^2.2.2 # Required for local data storage
-  web: ^1.1.1
-  
-  # Feature dependencies - safe to modify
+
+  # Feature dependencies
   cached_network_image: ^3.3.1
-  connectivity_plus: ^6.1.4
-  dio: ^5.4.0
-  fluttertoast: ^8.2.4
-  fl_chart: ^0.65.0
   installed_apps: ^2.1.1
 
 dev_dependencies:

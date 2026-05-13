@@ -11,8 +11,6 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
-pubspec.lock
-
 # IntelliJ related
 *.iml
 *.ipr
@@ -34,6 +32,9 @@ pubspec.lock
 .pub/
 /build/
 /web/
+
+# Local secrets (copy from env.example.json)
+env.json
 
 # Symbolication related
 app.*.symbols
