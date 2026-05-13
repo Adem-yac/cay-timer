@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Caytimer uses this service to send you back to the home screen when you open an app you marked as blocked. Enable it in system accessibility settings for blocking to apply outside Caytimer.</string>
+</resources>
